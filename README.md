@@ -1,12 +1,29 @@
-# Grob
+# Grob: grep an OSM Protobuf file. 
 
-Grep an OSM Protobuf file. 
+GROB = {**}GR{**}EP {**}O{**}sm proto{**}B{**}uff file 
 
+
+Search the waypoints of an Openstreetmap Protobuf file for a string. Additionally the maximum distance to a waypoint can be specified. 
+Output is of the form: lat,lon,tags
 
 
 # Build
 
+1) Your `GOPATH` variable is assumed to be set to a sensible value. 
 
+2) Get the osmpdf library (used for digesting OSM protobuf files)
+
+    $ go get github.com/qedus/osmpbf
+
+3) Clone `grob`
+
+    $ git clone https://github.com/wmo/grob
+
+    $ cd grob
+
+    $ go build grob
+
+4) You are good to go now. 
 
 
 
