@@ -31,7 +31,7 @@ Output is of the form: `lat,lon,tags`
 
 Use case: you want to eat a pizza close to Checkpoint Charlie in Berlin.
 
-1) Download the `Berling.osm.pbf` file from [download.geofabrik.de/europe/germany.html](http://download.geofabrik.de/europe/germany.html) (in case the link is no longer valid, start from here: [wiki.openstreetmap.org/wiki/Planet.osm](http://wiki.openstreetmap.org/wiki/Planet.osm)) 
+1) Download the `Berlin.osm.pbf` file from [download.geofabrik.de/europe/germany.html](http://download.geofabrik.de/europe/germany.html) (in case the link is no longer valid, start from here: [wiki.openstreetmap.org/wiki/Planet.osm](http://wiki.openstreetmap.org/wiki/Planet.osm)) 
 
 2) Locate checkpoint charlie
 
@@ -41,7 +41,7 @@ Use case: you want to eat a pizza close to Checkpoint Charlie in Berlin.
     52.507546, 13.390361,  name:Checkpoint Charlie name:ko:체크포인트 찰리 ..
     ..
 
-3) Check within a radius of 0.5 km of waypoint 52.507546 13.390361 
+3) Check within a radius of 0.5 km of waypoint 52.507546 13.390361 for pizza
 
     grob berlin-latest.osm.pbf -d 0.5 52.507546 13.390361 pizza
 
