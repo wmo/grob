@@ -80,8 +80,8 @@ func grok_args(args []string) (filename string, dist float64, lat float64, lon f
 
 %s osm-file [-d max-dist lat lon] [pattern]
 
-    eg. %s england-latest.osm mexican
-    eg. %s central-america-latest.osm -d 10 12.1166 -68.9333 > willemstad10k.csv
+    eg. %s england-latest.osm.pbf mexican
+    eg. %s central-america-latest.osm.pbf -d 10 12.1166 -68.9333 > willemstad10k.csv
 
 The unit for maximum distance is km. 
 `, os.Args[0], os.Args[0], os.Args[0])
