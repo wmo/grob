@@ -182,11 +182,20 @@ func handleNode(nd osmpbf.Node, dist float64, lat float64, lon float64, contains
 		for k, v := range nd.Tags {
 			tgs = tgs + " " + k + ":" + v
 		}
+		desc := strings.TrimSpace(tgs)
+
+		// if we don't have tags/description, then don't print
+		if len(desc) == 0 {
+			return
+		}
+
+		// replace the comma's in the description
+		desc = strings.Replace(desc, ",", "", -1)
 
 		if dist >= 0.0 {
-			fmt.Printf("%f, %f, %s #,%.2f\n", nd.Lat, nd.Lon, tgs, estim_distance)
+			fmt.Printf("%f, %f, %s #,%.2f\n", nd.Lat, nd.Lon, desc, estim_distance)
 		} else {
-			fmt.Printf("%f, %f, %s\n", nd.Lat, nd.Lon, tgs)
+			fmt.Printf("%f, %f, %s\n", nd.Lat, nd.Lon, desc)
 		}
 	}
 }
